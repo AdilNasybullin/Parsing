@@ -38,6 +38,7 @@ def parse():
     html = get_html(URL)
     if html.status_code == 200:
        cars = get_content(html.text)
+
     else:
         print('Error')
 
