@@ -31,13 +31,13 @@ def get_content(html):
              'date':  item.find('span', class_='date').get_text(strip=True)
 
         })
+        return cars
 
-    print(cars)
 
 def parse():
     html = get_html(URL)
     if html.status_code == 200:
-        get_content(html.text)
+       cars = get_content(html.text)
     else:
         print('Error')
 
